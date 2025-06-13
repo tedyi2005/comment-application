@@ -24,7 +24,7 @@ class CommentViewModel @Inject constructor(
             try {
                 _comments.value = repository.getComments()
             } catch (exception: Exception) {
-                Log.e("CommentViewModel", "Error: ${exception.message}")
+                _comments.value = emptyList()
             }
         }
     }

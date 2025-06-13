@@ -92,6 +92,9 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.hilt.android)
+    implementation(libs.androidx.ui.test.junit4.android)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
     kapt(libs.hilt.compiler)
 
     implementation(libs.retrofit)
@@ -106,5 +109,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Retrofit and MockWebServer
+    testImplementation(libs.retrofit)
+    testImplementation(libs.retrofit.gson)
+    testImplementation(libs.mockwebserver)
+    testImplementation(libs.truth)
+
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin) // Better Kotlin support
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    androidTestImplementation(libs.androidx.ui.test.junit4.v161)
+    debugImplementation(libs.androidx.ui.test.manifest.v161)
+
 }
 
